@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 import unittest
-import slides
+
+from slides import slides
 
 class SlideTests(unittest.TestCase):
     def test_validate_path(self):

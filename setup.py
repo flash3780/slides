@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 import slides
 
-description, long_description = slides.slides.__doc__.split('\n',1)
+description, long_description = slides.__doc__.split('\n',1)
 
 setup(
    name             = 'slides',
