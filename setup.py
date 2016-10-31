@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-import setuptools
-import slides 
+from setuptools import setup, find_packages
 
-description, long_description = slides.__doc__.split('\n',1)
+import slides
+
+description, long_description = slides.slides.__doc__.split('\n',1)
 
 setup(
    name             = 'slides',
@@ -21,12 +22,12 @@ setup(
       'Topic :: Office/Business',
       ],
    packages         = find_packages(),
+   test_suite       = 'nose.collector',
+   tests_require    = ['nose'],
    install_requires = [
+      'blessings',
+      'docopt',
       'os',
-      ]
-   entry_points     = {
-                      'console_scripts': [
-                         'slides.commandline:main',
-                         ]
-                      }
+      ],
+   entry_points     = {'console_scripts': ['slides.commandline:main']},
    )
