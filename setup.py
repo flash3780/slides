@@ -27,7 +27,6 @@ setup(
    install_requires = [
       'blessings',
       'docopt',
-      'os',
       ],
    entry_points     = {'console_scripts': ['slides = slides.commandline:main']},
    )

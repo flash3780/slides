@@ -16,7 +16,7 @@ def validate_path(slide_path):
     """Validates a path"""
 
     try:
-        os.isdir(slide_path)
+        os.path.isdir(slide_path)
     except OSError as err:
         print('OS error: {0}'.format(err))
     full_slide_path = os.path.abspath(slide_path)
